@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$.get()</title>
+    <script type="text/javascript" src="Js/jquery-3.6.0.min.js"></script>
+    <script>
+        //1.定义方法：
+        function fun()
+        {
+            //语法：$.get(url,[data],[callback],[type])
+            $.get("ajaxServlet",{username:"rose"},function (data) {
+                alert(data);
+            });
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="发送异步请求" onclick="fun();">
+    <input type="text">
+
+</body>
+</html>

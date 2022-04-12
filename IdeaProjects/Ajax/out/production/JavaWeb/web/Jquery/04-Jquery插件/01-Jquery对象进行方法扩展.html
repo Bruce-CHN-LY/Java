@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>
+        //使用Jquery插件，给Jquery对象添加两个方法check()所有的复选框，uncheck()取消所有的复选框
+
+        //1.定义Jquery插件
+        $.fn.extend({
+            //定义了一个check方法，所有的jq对象都可以调用。
+            checkFn:function (){
+                this.prop("checked",true);
+            }, //小心这里的逗号
+            //定义了一个uncheck方法，所有的jq对象都可以调用。
+            uncheckFn:function (){
+                this.prop("checked",false);
+            }
+        });
+        $(function () {
+            $("#btn-check").click(function () {
+                //获取所有的复选框
+                $("input[type='checkbox']").checkFn();
+            });
+            $("#btn-uncheck").click(function () {
+                //获取所有的复选框
+                $("input[type='checkbox']").uncheckFn();
+            });
+        });
+    </script>
+</head>
+<body>
+    <input id="btn-check" type="button" value="点击选中复选框" onclick="checkFn()">
+    <input id="btn-uncheck" type="button" value="点击取消复选框" onclick="uncheckFn()">
+    <br>
+    <input type="checkbox" value="football">足球
+    <input type="checkbox" value="basketball">篮球
+    <input type="checkbox" value="volleyball">排球
+</body>
+</html>

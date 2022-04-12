@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>默认的显示和隐藏</title>
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+    <script>
+        function hideFn(){
+          $("#showDiv").hide(5000,"swing")
+        }
+        function showFn(){
+            $("#showDiv").show(5000,"liner")
+        }
+        function toggleFn(){
+            $("#showDiv").toggle(5000,"swing")
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="点击隐藏div" onclick="hideFn()">
+    <input type="button" value="点击显示div" onclick="showFn()">
+    <input type="button" value="点击按钮切换显示和隐藏" onclick="toggleFn()">
+    <div id="showDiv" style="background: pink;width: 500px;height: 300px">div显示和隐藏</div>
+</body>
+</html>

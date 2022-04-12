@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>改变样式</title>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+<!--    资源的导入，一定要检查。-->
+    <script>
+        <!--    将div中包含有title属性的背景颜色更换为粉色-->
+        $(function () {
+            $("#bt1").click(function (){
+                $("div[title]").css("backgroundColor","pink");
+            })
+        })
+        // 将div中包含有title属性并且属性值为test的背景颜色更换为粉色、
+        $(function (){
+            $("#bt2").click(function () {
+                $("div[title='test']").css("backgroundColor","pink");
+            })
+        })
+        // 将div中不包含有title属性并且属性值为test的背景颜色更换为粉色、
+        $(function (){
+            $("#bt3").click(function () {
+                $("div[title!=test1]").css("backgroundColor","pink");
+            })
+        })
+        // div标签下含有title属性，且属性值为test1以及test2的背景颜色变为粉红色
+        $(function () {
+            $("#bt4").click(function () {
+                $("div[title=test1][title=test2]").css("backgroundColor","pink");
+            })
+        })
+    </script>
+    <style>
+        div{
+            border: 1px black solid;
+            float:left;
+            width: 200px;
+            height: 400px;
+        }
+        span
+        {
+            float: right;
+            border: 1px black solid;
+            width: 100px;
+            height: 150px;
+        }
+        .div1{
+            width: 100px;
+            float: right;
+            height: 150px;
+        }
+        .div2{
+            width: 100px;
+            height: 150px;
+        }
+        .div3{
+            width: 100px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div title="">
+        这是一个含有titile属性的div
+        <span id="123">123</span>
+    </div>
+    <div>
+        <div class="div2" title="test"> 这是一个含有titile属性=test的div</div>
+         <span>123</span>
+        </div>
+    </div>
+    <div>
+        <div class="div3" title="test1">这是一个含有titile属性=test1的div
+            <div class="div1">div标签3</div>
+        </div>
+    </div>
+    <div>
+        <div class="div3" title="test2">这是一个含有titile属性=test2的div</div>
+    </div>
+    <input type="">
+    <input type="button" value="div标签下的含有title属性的背景颜色变为粉红色" id="bt1">
+    <input type="button" value="div标签下含有title属性，且属性值为test的背景颜色变为粉红色"id="bt2">
+    <input type="button" value="div标签下含有title属性且title的值不为test的的背景颜色变为粉红色"id="bt3">
+    <input type="button" value="div标签下含有title属性，且属性值为test1以及test2的背景颜色变为粉红色"id="bt4">
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS数组遍历</title>
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+    <script>
+        //遍历方式1：使用js的形式
+        $(function () {
+            //1. 获取所有的ul下的li
+            let citys = $("#ul li");
+            //2. 遍历li
+            for(let i=0;i<citys.length;i++)
+            {
+                //2.获取内容。
+                alert(i+":"+citys[i].innerHTML);
+            }
+        })
+    </script>
+</head>
+<body>
+    <ul id="city">
+        <li>北京</li>
+        <li>上海</li>
+        <li>天津</li>
+        <li>重庆</li>
+    </ul>
+</body>
+</html>

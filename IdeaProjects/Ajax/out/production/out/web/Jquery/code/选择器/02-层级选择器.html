@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>改变样式</title>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+<!--    资源的导入，一定要检查。-->
+    <script>
+        $(function () {
+            $("#bt1").click(function () {
+                $("div div").css("backgroundColor","Pink");
+            });
+        });
+        $(function () {
+            $("#bt2").click(function () {
+                $("div>div").css("backgroundColor","Pink");
+            });
+        });
+    </script>
+    <style>
+        div{
+            border: 1px black solid;
+            float:left;
+            width: 200px;
+            height: 400px;
+        }
+        span
+        {
+            float: right;
+            border: 1px black solid;
+            width: 100px;
+            height: 150px;
+        }
+        .div1{
+            width: 100px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <span id="123">123</span>
+        <div class="div1">div标签1</div>
+    </div>
+    <div><div class="div2"><span >123</span>div标签2</div></div>
+    <div><div class="div3"><div class="div1">div标签3</div></div></div>
+    <div><div class="div4">div标签4</div></div>
+
+    <input type="button" value="点击后，所有div下的div标签变成红色" id="bt1">
+    <input type="button" value="点击后，所有div下的span标签变成红色" id="bt2">
+</body>
+</html>

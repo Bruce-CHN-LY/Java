@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../../js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+         $("#btn").on("click",function () {
+             alert("被点击");
+         });
+         $("#btn2").click(function () {
+             $("#btn").off("click");
+             /**
+              * 如果这里的off不传递参数，则会移除所有的事件。
+              */
+         })
+        });
+    </script>
+</head>
+<body>
+    <input id="btn" type="button" value="使用on绑定点击事件">
+    <input id="btn2" type="button" value="使用off解绑点击事件">
+</body>
+</html>

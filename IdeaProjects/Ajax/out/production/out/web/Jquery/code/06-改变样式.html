@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>改变样式</title>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>
+        //通过代码来改变div1的背景色样式
+        $(function (){
+            $("#b1").click(function () {
+                $("#div1").css("background-color","red");
+                //或者按照dom的写法
+                $("#div1").css("backgroundColor","red");
+
+            })
+        })
+    </script>
+</head>
+<body>
+<div id="div1">div1....</div>
+<div id="div2">div2....</div>
+<input type="button" value="点我" id="b1">
+
+</body>
+
+</html>

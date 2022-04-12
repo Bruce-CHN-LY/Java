@@ -1,0 +1,51 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Redis:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Redis_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Redis/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Redis" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$USER_HOME$/apache-tomcat-10.0.14/lib/el-api.jar" />
+          <element id="file-copy" path="$USER_HOME$/apache-tomcat-10.0.14/lib/jasper.jar" />
+          <element id="file-copy" path="$USER_HOME$/apache-tomcat-10.0.14/lib/jsp-api.jar" />
+          <element id="file-copy" path="$USER_HOME$/apache-tomcat-10.0.14/lib/catalina.jar" />
+          <element id="file-copy" path="$USER_HOME$/apache-tomcat-10.0.14/lib/ecj-4.20.jar" />
+          <element id="file-copy" path="$USER_HOME$/apache-tomcat-10.0.14/lib/jasper-el.jar" />
+          <element id="file-copy" path="$USER_HOME$/apache-tomcat-10.0.14/lib/jaspic-api.jar" />
+          <element id="file-copy" path="$USER_HOME$/apache-tomcat-10.0.14/lib/tomcat-api.jar" />
+          <element id="file-copy" path="$USER_HOME$/apache-tomcat-10.0.14/lib/tomcat-jni.jar" />
+          <element id="file-copy" path="$USER_HOME$/apache-tomcat-10.0.14/lib/catalina-ha.jar" />
+          <element id="file-copy" path="$USER_HOME$/apache-tomcat-10.0.14/lib/servlet-api.jar" />
+          <element id="file-copy" path="$USER_HOME$/apache-tomcat-10.0.14/lib/tomcat-dbcp.jar" />
+          <element id="file-copy" path="$USER_HOME$/apache-tomcat-10.0.14/lib/tomcat-jdbc.jar" />
+          <element id="file-copy" path="$USER_HOME$/apache-tomcat-10.0.14/lib/tomcat-util.jar" />
+          <element id="file-copy" path="$USER_HOME$/apache-tomcat-10.0.14/lib/catalina-ant.jar" />
+          <element id="file-copy" path="$USER_HOME$/apache-tomcat-10.0.14/lib/catalina-ssi.jar" />
+          <element id="file-copy" path="$USER_HOME$/apache-tomcat-10.0.14/lib/tomcat-coyote.jar" />
+          <element id="file-copy" path="$USER_HOME$/apache-tomcat-10.0.14/lib/websocket-api.jar" />
+          <element id="file-copy" path="$USER_HOME$/apache-tomcat-10.0.14/lib/tomcat-i18n-cs.jar" />
+          <element id="file-copy" path="$USER_HOME$/apache-tomcat-10.0.14/lib/tomcat-i18n-de.jar" />
+          <element id="file-copy" path="$USER_HOME$/apache-tomcat-10.0.14/lib/tomcat-i18n-es.jar" />
+          <element id="file-copy" path="$USER_HOME$/apache-tomcat-10.0.14/lib/tomcat-i18n-fr.jar" />
+          <element id="file-copy" path="$USER_HOME$/apache-tomcat-10.0.14/lib/tomcat-i18n-ja.jar" />
+          <element id="file-copy" path="$USER_HOME$/apache-tomcat-10.0.14/lib/tomcat-i18n-ko.jar" />
+          <element id="file-copy" path="$USER_HOME$/apache-tomcat-10.0.14/lib/tomcat-i18n-ru.jar" />
+          <element id="file-copy" path="$USER_HOME$/apache-tomcat-10.0.14/lib/annotations-api.jar" />
+          <element id="file-copy" path="$USER_HOME$/apache-tomcat-10.0.14/lib/catalina-tribes.jar" />
+          <element id="file-copy" path="$USER_HOME$/apache-tomcat-10.0.14/lib/tomcat-util-scan.jar" />
+          <element id="file-copy" path="$USER_HOME$/apache-tomcat-10.0.14/lib/tomcat-websocket.jar" />
+          <element id="file-copy" path="$USER_HOME$/apache-tomcat-10.0.14/lib/tomcat-i18n-pt-BR.jar" />
+          <element id="file-copy" path="$USER_HOME$/apache-tomcat-10.0.14/lib/tomcat-i18n-zh-CN.jar" />
+          <element id="file-copy" path="$USER_HOME$/apache-tomcat-10.0.14/lib/catalina-storeconfig.jar" />
+          <element id="file-copy" path="$USER_HOME$/apache-tomcat-10.0.14/lib/jakartaee-migration-1.0.0-shaded.jar" />
+          <element id="library" level="project" name="lib (3)" />
+          <element id="library" level="module" name="JUnit4" module-name="Redis" />
+          <element id="library" level="project" name="lib3" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

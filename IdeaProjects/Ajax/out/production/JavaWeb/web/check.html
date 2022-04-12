@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+    window.onload=function ()
+    {
+      //1.获取id
+      let img = document.getElementById("checkCode");
+      img.onclick=function (){
+        //添加时间戳，避免缓存问题
+        let time = new Date().getTime();
+        img.src="/responseDemo5?"+time;
+      }
+
+      //2.获取id
+      let href = document.getElementById("href");
+      href.onclick=function (){
+        let time = new Date().getTime();
+        a.href="/responseDemo5?"+time;
+      }
+    }
+  </script>
+</head>
+<body>
+  <img src="/responseDemo5" id="checkCode" />
+  <a href="" id="href">看不清换一张</a>
+</body>
+</html>

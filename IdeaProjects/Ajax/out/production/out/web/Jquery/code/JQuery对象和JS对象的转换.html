@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery对象和JS对象的转换</title>
+  <script src="../js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<!--测试Jquery来输出输出标签体内容-->
+<div id="div1">div1....</div>
+<div id="div2">div2....</div>
+<script>
+    //1. 通过JS的方式来获取名称叫div的所有html元素对象
+    let divs = document.getElementsByTagName("div");
+    alert(divs); //可以将其当作数组来使用，
+    //2.通过JQuery的方式来获取名称叫做div的所有html元素对象
+    let $divs = $("div");
+    alert($divs);//可以当作数组来使用，
+
+    //需求：通过JS的方式来设置所有标签体为div的标签题内容为aaa.
+    for (let i = 0; i < divs.length; i++) {
+        divs[i].innerHTML="aaa";
+    }
+
+    //需求：通过JQuery的方式来设置所有标签体为div的标签题内容为aaa.
+    $divs.html("bbb");
+
+    /**
+     *  Jquery的对象在操作时，更加方便。
+     *  Jquery和JS对象的方法是不通用的。
+     *  两者相互转换
+     *      JQuery转为JS  JQuery对象[索引]或者JQuery对象.get[索引]
+     *      JS转为JQuery：$(js对象)
+     */
+
+</script>
+</body>
+
+</html>

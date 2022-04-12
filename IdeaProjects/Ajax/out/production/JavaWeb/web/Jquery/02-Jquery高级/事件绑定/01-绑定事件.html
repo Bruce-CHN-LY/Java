@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../../js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            /*
+            $("#name").click(function () {
+                alert("对话框被点击");
+            })
+             */
+            //鼠标移出事件
+            $("#name").mouseover(function () {
+                alert("鼠标出现");
+            })
+            $("#name").mouseout(function () {
+                alert("鼠标移除");
+            })
+        })
+    </script>
+</head>
+<body>
+    <input id="name" type="text" value="绑定点击事件">
+</body>
+</html>

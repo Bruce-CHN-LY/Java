@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQ数组遍历方式1</title>
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            //1.获取ul下的所有li
+            let citys = $("#city li");
+            // //使用JQ的each方式遍历
+            // citys.each(function () {
+            //     //1. 使用this遍历，则无序号
+            //     alert($(this).html());
+            //
+            // })
+            //或使用function中的参数
+            citys.each(function (index,element) {
+                //1. 使用this遍历，则无序号
+                // alert(index+":"+element.innerHTML);
+                alert(index+":"+$(element).html());
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <ul id="city">
+        <li>北京</li>
+        <li>上海</li>
+        <li>天津</li>
+        <li>重庆</li>
+    </ul>
+</body>
+</html>

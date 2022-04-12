@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>改变样式</title>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+<!--    资源的导入，一定要检查。-->
+    <script>
+        $(function () {
+            $("#bt1").click(function () {
+                $("div span").css("backgroundColor","Pink");
+            });
+        });
+    </script>
+    <style>
+        div{
+            border: 1px black solid;
+            float:left;
+            width: 200px;
+            height: 400px;
+        }
+        span
+        {
+            float: right;
+            border: 1px black solid;
+            width: 100px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="点击span变粉色" id="bt1">
+    <div>
+        <span id="123">123</span>
+        <span>123</span>
+    </div>
+    <div></div>
+</body>
+</html>

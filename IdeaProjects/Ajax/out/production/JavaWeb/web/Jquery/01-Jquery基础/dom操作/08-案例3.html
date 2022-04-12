@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <style>
+        .border{
+            height: 500px;
+            padding: 100px;
+        }
+       #rightName
+       {
+           float: right;
+       }
+    </style>
+    <script>
+       //多选下拉列表的左右移动
+       $(function (){
+           //1. toRight
+           $("#toRight").click(function () {
+               //获取右侧的下啦列表对象，append填充选中的Option
+               $("#rightName").append($("#leftName>option:selected"));
+           });
+           $("#toLeft").click(function () {
+               $("#rightName>option:checked").appendTo($("#leftName"));
+           });
+       });
+    </script>
+</head>
+<body>
+    <div class="border">
+        <select id="leftName" multiple="multiple">
+            <option>张三</option>
+            <option>李四</option>
+            <option>王五</option>
+            <option>赵六</option>
+        </select>
+        <div id="btn">
+            <input type="button" id="toRight" value="-->"><br>
+            <input type="button" id="toLeft" value="<--">
+        </div>
+        <select id="rightName" multiple="multiple">
+            <option>钱七</option>
+        </select>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件绑定</title>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>
+
+        /**
+         * window.onload=function(){} 等同于 $(function(){});
+         * DOM文件加载完成后，执行下面的代码。
+         */
+        $(function () {
+            $("#b1").click(function () {
+                alert("123");
+            });
+        });
+    </script>
+</head>
+<body>
+<!--测试Jquery来输出输出标签体内容-->
+<div id="div1">div1....</div>
+<div id="div2">div2....</div>
+<input type="button" value="点我" id="b1">
+
+</body>
+
+</html>

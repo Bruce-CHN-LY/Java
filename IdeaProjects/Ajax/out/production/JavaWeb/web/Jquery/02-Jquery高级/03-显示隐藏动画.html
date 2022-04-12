@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>淡入淡出的隐藏和显示</title>
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+    <script>
+        function fadeInFn(){
+          $("#showDiv").fadeIn("normal","swing")
+        }
+        function fadeOutFn(){
+            $("#showDiv").fadeOut("normal","swing")
+        }
+        function fadeToggleFn(){
+            $("#showDiv").fadeToggle("normal","swing")
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="点击显示div" onclick="fadeInFn()">
+    <input type="button" value="点击隐藏div" onclick="fadeOutFn()">
+    <input type="button" value="点击按钮切换显示和隐藏" onclick="fadeToggleFn()">
+    <div id="showDiv" style="background: pink;width: 500px;height: 300px">div显示和隐藏</div>
+</body>
+</html>

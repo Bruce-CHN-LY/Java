@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>
+        //对全局方法扩展2个方法，扩展main方法：求2个值的最小值，扩展max方法，求2个值的最大值。
+        $.extend({
+            max:function (a,b) {
+                //返回两个数的最大值；
+                return a>=b?a:b;
+            },
+            min:function (a,b) {
+                //返回两个数的最大值；
+                return a<=b?a:b;
+            }
+        });
+        alert($.max(3,4));
+    </script>
+</head>
+<body>
+</body>
+</html>

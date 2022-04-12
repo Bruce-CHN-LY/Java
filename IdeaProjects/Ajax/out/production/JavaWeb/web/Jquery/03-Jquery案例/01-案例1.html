@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            setTimeout(function () {
+                $("#ad").show("fast","swing");
+            },3000);
+            setTimeout(function () {
+                $("#ad").hide("fast","swing");
+            },8000);
+        })
+    </script>
+</head>
+<body>
+    <!--整体的div-->
+    <div>
+    <!-- 广告的div -->
+        <div id="ad" style="display: none">
+            <img style="width: 100%" src="1.jpeg">
+        </div>
+        <!-- 下方正文部分-->
+        <div id="content">
+            正文部分
+        </div>
+    </div>
+</body>
+</html>

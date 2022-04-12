@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+    <script type="text/javascript" src="Js/jquery-3.6.0.min.js"></script>
+    <script>
+        //文本输入框绑定失去焦点操作
+        $(function () {
+            $("#username").blur(function () {
+                //获取username文本输入框的值，获取后发送ajax请求。
+                let val = $(this).val();//获取username
+                $.get("checkUser",{username:val},function (date) {
+                    //期望服务器响应回的数据格式为
+                    // 存在{"userExsit":true,"msg":"此用户已存在"}
+                    //不存在{"userExsit":false,"msg":"此用户可以被注册"}
+                    //判断userExsit的值是否为true
+                    let span = $("#s_username");
+                    if(date.userEsxit){
+                        //用户名存在
+                        span.css("color","Red");
+                        span.html(date.msg);
+                    }
+                    else {
+                        //用户名不存在
+                        span.css("color","green");
+                        span.html(date.msg);
+                    }
+                },"json");
+            })
+        })
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text" name="username" id="username" placeholder="请输入用户名">
+        <span id="s_username">
+
+        </span>
+        <br>
+        <input type="password" name="password" placeholder="请输入密码"><br>
+        <input type="submit" name="注册" ><br>
+
+    </form>
+</body>
+</html>
